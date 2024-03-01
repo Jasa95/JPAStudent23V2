@@ -18,6 +18,11 @@ public class StudentRestController {
     @Autowired
     StudentRepository studentRepository;
 
+    @GetMapping("/")
+        public String hello(){
+            return "Du er ok";
+    }
+
     @GetMapping("/students")
     public List<Student> getStudents() {
         return studentRepository.findAll();

@@ -23,10 +23,12 @@ public class InitData implements CommandLineRunner {
         s1.setBornTime(LocalTime.of(11,2,3));
         studentRepository.save(s1);
 
-        s1.setName("Viggo");
-        s1.setId(0);
-        studentRepository.save(s1);
-        System.out.println(s1);
+        Student s2 = new Student(); // Create a new Student object
+        s2.setName("Viggo");
+        s2.setBornDate(s1.getBornDate()); // Assuming Viggo has the same birthdate as Bruce
+        s2.setBornTime(s1.getBornTime()); // Assuming Viggo has the same birthtime as Bruce
+        studentRepository.save(s2);
+        System.out.println(s2);
 
 
 

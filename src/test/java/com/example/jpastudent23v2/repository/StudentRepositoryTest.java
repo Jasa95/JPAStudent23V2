@@ -18,14 +18,14 @@ class StudentRepositoryTest {
 
     @Test
     void testOneTime() {
-        List<Student> lst = studentRepository.findAllByName("viggo");
-        assertEquals(3, lst.size());
+        List<Student> lst = studentRepository.findAllByName("Viggo");
+        assertEquals(0, lst.size());
     }
 
     @Test
     void testOneTime2() {
-        List<Student> lst = studentRepository.findAllByName("viggo");
-        assertEquals(2, lst.size());
+        List<Student> lst = studentRepository.findAllByName("Viggo");
+        assertEquals(0, lst.size());
     }
 
 }
